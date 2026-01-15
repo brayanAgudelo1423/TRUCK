@@ -66,7 +66,7 @@ function renderCart() {
     let html = '<div class="space-y-4">';
 
     cart.forEach((item, index) => {
-        const subtotal = (item.price * item.quantity).toFixed(2);
+        const subtotal = (item.price * item.quantity);
         html += `
             <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 hover:border-blue-300 transition-colors duration-300">
                 <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
@@ -132,7 +132,7 @@ function updateCartUI() {
     const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     const total = subtotal;
 
-    document.getElementById('total').textContent = `$${total.toFixed(2)}`;
+    document.getElementById('total').textContent = `$${total.toFixed(2).replace(/\.00$/, '')}`;
     document.getElementById('cartCount').textContent = cart.length;
     
     // Mostrar/ocultar botón Continuar comprando
@@ -179,16 +179,19 @@ function pagarWhatsapp() {
     window.open(urlWhatsapp, '_blank');
 }
 
-// Mostrar notificación
-function showNotification(message) {
-    const notification = document.createElement('div');
-    notification.className = 'fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg animate-bounce';
-    notification.innerHTML = `<i class="fas fa-check mr-2"></i>${message}`;
-    document.body.appendChild(notification);
+// Mostrar notificación (solo si no existe ya)
+if (typeof showNotification === 'undefined') {
+    function showNotification(message) {
+        const notification = document.createElement('div');
+        notification.className = 'fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg animate-bounce';
+        notification.innerHTML = `<i class="fas fa-check mr-2"></i>${message}`;
+        document.body.appendChild(notification);
 
-    setTimeout(() => {
-        notification.remove();
-    }, 2000);
+        setTimeout(() => {
+            notification.remove();
+        }, 2000);
+    }
+    window.showNotification = showNotification;
 }
 
 // Hacer agregarAlCarrito accesible desde otras páginas
