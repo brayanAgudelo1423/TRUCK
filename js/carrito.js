@@ -55,7 +55,7 @@ function renderCart() {
             <div class="text-center py-12">
                 <i class="fas fa-inbox text-gray-300 text-6xl mb-4"></i>
                 <p class="text-gray-500 text-lg">Tu carrito está vacío</p>
-                <a href="../index.html" class="inline-block mt-4 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300">
+                <a href="#" onclick="history.back(); return false;" class="inline-block mt-4 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300">
                     Continuar comprando
                 </a>
             </div>
@@ -67,12 +67,14 @@ function renderCart() {
 
     cart.forEach((item, index) => {
         const subtotal = (item.price * item.quantity);
+        const priceFormatted = item.price.toFixed(2).replace(/\.00$/, '');
+        const subtotalFormatted = subtotal.toFixed(2).replace(/\.00$/, '');
         html += `
             <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 hover:border-blue-300 transition-colors duration-300">
                 <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                     <div class="flex-1">
                         <h3 class="font-semibold text-gray-900 text-lg mb-1">${item.name}</h3>
-                        <p class="text-gray-600 text-sm">$${item.price.toFixed(2)} c/u</p>
+                        <p class="text-gray-600 text-sm">$${priceFormatted} c/u</p>
                     </div>
                     
                     <div class="flex items-center gap-3">
@@ -83,7 +85,7 @@ function renderCart() {
                         </div>
                         
                         <div class="text-right min-w-24">
-                            <p class="font-bold text-gray-900 text-lg">$${subtotal}</p>
+                            <p class="font-bold text-gray-900 text-lg">$${subtotalFormatted}</p>
                         </div>
                         
                         <button onclick="removeItem(${index})" class="bg-red-600 text-white px-3 py-2 rounded hover:bg-red-700 transition-colors duration-300 text-sm font-semibold">

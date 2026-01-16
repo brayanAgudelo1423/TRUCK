@@ -50,9 +50,16 @@
     <!-- Products Section -->
     <section id="productos" class="py-12 sm:py-16 md:py-20 bg-gray-50">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-8 sm:mb-12 md:mb-16">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 mb-3 sm:mb-4">Frenos y Componentes</h2>
-                <p class="text-base sm:text-lg md:text-xl text-gray-600">Los mejores sistemas de frenado para tu vehículo</p>
+            <div class="flex items-start justify-between mb-8 sm:mb-12 md:mb-16">
+                <a href="../index.html" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg font-semibold flex items-center gap-2 transition-colors duration-300 shadow-lg">
+                    <i class="fas fa-home"></i>
+                    <span class="hidden sm:inline">Ir al Inicio</span>
+                </a>
+                <div class="text-center flex-1 px-4">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 mb-3 sm:mb-4">Catalogo</h2>
+                    <p class="text-base sm:text-lg md:text-xl text-gray-600"></p>
+                </div>
+                <div class="w-24 sm:w-32"></div>
             </div>
 
             <!-- Product Grid -->
@@ -72,7 +79,7 @@
                     </div>
                     <div class="p-5 sm:p-6">
                         <div class="flex items-center justify-between mb-3">
-                            <span class="text-xs sm:text-sm font-bold text-red-600 bg-gradient-to-r from-red-50 to-red-100 px-3 py-1.5 rounded-full border border-red-200">🛑 Frenos</span>
+                            <span class="text-xs sm:text-sm font-bold text-red-600 bg-gradient-to-r from-red-50 to-red-100 px-3 py-1.5 rounded-full border border-red-200"> Frenos</span>
                             <div class="flex items-center gap-1">
                                 <div class="flex text-yellow-400 text-sm">
                                     <i class="fas fa-star"></i>
@@ -81,7 +88,7 @@
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                 </div>
-                                <span class="text-gray-600 text-xs sm:text-sm ml-1 font-semibold">(203)</span>
+                                <span class="text-gray-600 text-xs sm:text-sm ml-1 font-semibold"></span>
                             </div>
                         </div>
                         <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2 group-hover:text-red-600 transition-colors">Kit Completo de Frenos Cerámicos</h3>
@@ -89,15 +96,15 @@
                         
                         <!-- Features list -->
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-lg">✓ Garantía 12 meses</span>
-                            <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-lg">✓ Envío gratis</span>
+                            <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-lg"> Garantía 12 meses</span>
+                            <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-lg"> Envío gratis</span>
                         </div>
                         
                         <div class="border-t border-gray-100 pt-4">
                             <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
                                 <div>
-                                    <p class="text-xs sm:text-sm text-gray-500 line-through">$1,200</p>
-                                    <p class="text-2xl sm:text-3xl font-black bg-gradient-to-r from-red-600 to-pink-600 bg-clip-text text-transparent">$960</p>
+                                    <p class="text-xs sm:text-sm text-gray-500 line-through"></p>
+                                    <p class="text-2xl sm:text-3xl font-black bg-gradient-to-r from-red-600 to-pink-600 bg-clip-text text-transparent">$2000</p>
                                 </div>
                                 <button onclick="agregarAlCarrito('Kit Completo de Frenos Cerámicos', 960)" class="w-full sm:w-auto bg-gradient-to-r from-red-600 via-red-700 to-pink-700 text-white px-5 py-3 rounded-xl text-sm sm:text-base font-bold hover:from-red-700 hover:to-pink-800 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
                                     <i class="fas fa-shopping-cart mr-2"></i>Agregar
@@ -124,7 +131,7 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star-half-alt"></i>
-                                <span class="text-gray-600 text-sm ml-2">(187)</span>
+                                <span class="text-gray-600 text-sm ml-2"></span>
                             </div>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Discos de Freno Ventilados</h3>
@@ -157,14 +164,14 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
-                                <span class="text-gray-600 text-sm ml-2">(231)</span>
+                                <span class="text-gray-600 text-sm ml-2"></span>
                             </div>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Pastillas de Freno Semi-Metálicas</h3>
                         <p class="text-gray-600 mb-4">Bajo ruido y polvo. Excelente potencia de frenado.</p>
                         <div class="flex items-center justify-between">
                             <div>
-                                <p class="text-sm text-gray-500 line-through">$250</p>
+                                <p class="text-sm text-gray-500 line-through"></p>
                                 <p class="text-3xl font-black text-gray-900">$205</p>
                             </div>
                             <button onclick="agregarAlCarrito('Pastillas de Freno Semi-Metálicas', 205)" class="bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-3 rounded-lg font-semibold hover:from-red-700 hover:to-red-800 transition-all duration-300 shadow-lg hover:shadow-xl">
@@ -191,7 +198,7 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
-                                <span class="text-gray-600 text-sm ml-2">(145)</span>
+                                <span class="text-gray-600 text-sm ml-2"></span>
                             </div>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Cilindro Maestro de Freno</h3>
@@ -221,7 +228,7 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="far fa-star"></i>
-                                <span class="text-gray-600 text-sm ml-2">(98)</span>
+                                <span class="text-gray-600 text-sm ml-2"></span>
                             </div>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Pastillas de Freno Orgánicas</h3>
@@ -254,14 +261,14 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star-half-alt"></i>
-                                <span class="text-gray-600 text-sm ml-2">(156)</span>
+                                <span class="text-gray-600 text-sm ml-2"></span>
                             </div>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Líneas de Freno de Acero Trenzado</h3>
                         <p class="text-gray-600 mb-4">Mayor resistencia y respuesta. Kit completo.</p>
                         <div class="flex items-center justify-between">
                             <div>
-                                <p class="text-sm text-gray-500 line-through">$450</p>
+                                <p class="text-sm text-gray-500 line-through"></p>
                                 <p class="text-3xl font-black text-gray-900">$396</p>
                             </div>
                             <button onclick="agregarAlCarrito('Líneas de Freno de Acero Trenzado', 396)" class="bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-3 rounded-lg font-semibold hover:from-red-700 hover:to-red-800 transition-all duration-300 shadow-lg hover:shadow-xl">
