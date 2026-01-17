@@ -67,8 +67,14 @@ function renderCart() {
 
     cart.forEach((item, index) => {
         const subtotal = (item.price * item.quantity);
-        const priceFormatted = item.price.toFixed(2).replace(/\.00$/, '');
-        const subtotalFormatted = subtotal.toFixed(2).replace(/\.00$/, '');
+        const priceFormatted = item.price.toLocaleString('es-ES', {
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0
+        });
+        const subtotalFormatted = subtotal.toLocaleString('es-ES', {
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0
+        });
         html += `
             <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 hover:border-blue-300 transition-colors duration-300">
                 <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
@@ -134,7 +140,13 @@ function updateCartUI() {
     const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     const total = subtotal;
 
-    document.getElementById('total').textContent = `$${total.toFixed(2).replace(/\.00$/, '')}`;
+    // Formato de número con separadores de miles
+    const totalFormateado = total.toLocaleString('es-ES', {
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0
+    });
+    
+    document.getElementById('total').textContent = `$${totalFormateado}`;
     document.getElementById('cartCount').textContent = cart.length;
     
     // Mostrar/ocultar botón Continuar comprando
@@ -173,7 +185,7 @@ function pagarWhatsapp() {
     mensaje += '─────────────────────\n';
     mensaje += `*💰 TOTAL A PAGAR: $${total.toFixed(2)}*\n\n`;
     mensaje += '✅ Confirma tu pedido para continuar.\n';
-    mensaje += '¡Gracias por tu compra!';
+    mensaje += '¡gracias!';
 
     const mensajeEncodado = encodeURIComponent(mensaje);
     const urlWhatsapp = `https://wa.me/${WHATSAPP_NUMBER}?text=${mensajeEncodado}`;

@@ -38,7 +38,7 @@
         // Función para mostrar notificación
         function showNotification(message) {
             const notification = document.createElement('div');
-            notification.className = 'fixed bottom-6 right-6 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 animate-bounce';
+            notification.className = 'fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-green-500 text-white px-8 py-4 rounded-lg shadow-lg z-50 animate-bounce';
             notification.innerHTML = `<i class="fas fa-check mr-2"></i>${message}`;
             document.body.appendChild(notification);
 
